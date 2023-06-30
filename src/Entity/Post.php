@@ -29,6 +29,11 @@ class Post
     #[ORM\Column(length: 255)]
     private ?text $url = null;
 
+    #[ORM\ManyToOne(inversedBy: 'posts')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?User $user = null;
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +95,30 @@ class Post
     public function setUrl(string $url): static
     {
         $this->url = $url;
+
+        return $this;
+    }
+
+    public function getUser(): ?User
+    {
+        return $this->user;
+    }
+
+    public function setUser(?User $user): static
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    public function getInteraction(): ?string
+    {
+        return $this->interaction;
+    }
+
+    public function setInteraction(string $interaction): static
+    {
+        $this->interaction = $interaction;
 
         return $this;
     }
