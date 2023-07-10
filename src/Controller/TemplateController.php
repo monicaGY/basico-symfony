@@ -39,4 +39,18 @@ class TemplateController extends AbstractController
         // throw $this->createNotFoundException('Esta URL no esta disponible');
         throw new NotFoundHttpException('Esta URL no esta disponible !');
     }
+    
+    #[Route('/template/trabajo', name: 'template_trabajo')]
+    public function trabajo(): Response
+     {
+        //  $nombre = "Elvia";
+        //  $edad = 35;
+
+        //  return $this->render('template/trabajo.html.twig',
+        //  compact('nombre', 'edad')
+        //  );
+         return $this->render('template/trabajo.html.twig', [
+             'nombre' => 'Juana', 'edad' => 20
+         ]);
+     }
 }
