@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso symfony - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{asset('css/style.css')}}"/>
+    {# ruta absoluta #}
+    <link rel="icon" href="{{absolute_url(asset('img/foto1.jpg'))}}"/>
 </head>
 <body>
+    <h1 class="rojo">Hola</h1>
     {% block body %}{% endblock %}
+    <script src="{{asset('js/script.js')}}"></script>
+
 </body>
 </html>
