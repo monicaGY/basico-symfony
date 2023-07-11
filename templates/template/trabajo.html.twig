@@ -7,3 +7,11 @@ Me llamo {{nombre}} y tengo {{edad}} años
 <p> Tu edad es {{edad}}</p>
 
 {{dump(paises)}}
+
+<p>
+{% if edad <= 18 %}
+    es menor de edad
+{% else %}
+    es mayor de edad
+{% endif %}
+</p>
