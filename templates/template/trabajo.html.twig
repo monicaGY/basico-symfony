@@ -25,3 +25,7 @@ Me llamo {{nombre}} y tengo {{edad}} años
 </ul>
 
 {{include('include.html.twig')}}
+
+{% set html = '<b>Soy un texto en negrita</b>'%}
+
+{{html|raw}}
