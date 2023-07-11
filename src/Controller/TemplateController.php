@@ -73,4 +73,10 @@ class TemplateController extends AbstractController
              'paises' => $paises
          ]);
      }
+
+     #[Route('/template/layout', name: 'template_layout')]
+     public function layout(): Response
+     {
+         return $this->render('template/layout.html.twig');
+     }
 }
