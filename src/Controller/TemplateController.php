@@ -49,8 +49,28 @@ class TemplateController extends AbstractController
         //  return $this->render('template/trabajo.html.twig',
         //  compact('nombre', 'edad')
         //  );
+
+        $paises = array (
+            array (
+                "nombre" => "Alemania", "id" => 1
+                ) ,
+            array (
+                "nombre" => "España", "id" => 2
+                ) ,
+            array (
+                "nombre" => "Francia", "id" => 3
+                ) ,
+            array (
+                "nombre" => "Italia", "id" => 4
+                ) ,
+            array (
+                "nombre" => "Australia", "id" => 5
+                ) 
+        );
+        
          return $this->render('template/trabajo.html.twig', [
-             'nombre' => 'Juana', 'edad' => 20
+             'nombre' => 'Juana', 'edad' => 20,
+             'paises' => $paises
          ]);
      }
 }
