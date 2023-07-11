@@ -15,3 +15,11 @@ Me llamo {{nombre}} y tengo {{edad}} años
     es mayor de edad
 {% endif %}
 </p>
+
+<h3>Países</h3>
+
+<ul>
+{% for pais in paises %}
+    <li>Nombre: {{pais.nombre}} | ID: {{pais.id}}</li>
+{% endfor %}
+</ul>
