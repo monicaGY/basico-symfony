@@ -29,3 +29,8 @@ Me llamo {{nombre}} y tengo {{edad}} años
 {% set html = '<b>Soy un texto en negrita</b>'%}
 
 {{html|raw}}
+
+
+<p><a href="{{path('template_excepcion')}}">Ir a excepcion</a></p>
+
+<p><a href ="{{path('template_parametros', {id:12, palabra:'Pasando parámetros'})}}">Pasar parametros</a></p>
